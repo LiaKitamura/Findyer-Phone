@@ -1,0 +1,15 @@
+<h1>RESULTS</h1>
+<p>
+  Here are your results
+</p>
+<%= @phone.screen_size %>
+<%= @phone.os %>
+<%= @phone.camera %>
+
+<% if @exact_match.class == Array %>
+  <% @exact_match.each do |match| %>
+    <%= match.name %>
+  <% end %>
+<% else %>
+  <%= @exact_match %>
+<% end %>

@@ -1,0 +1,21 @@
+<h1 id="logo">FindYer Phone</h1>
+<%= image_tag('cellicon.png', size: '100x100') %>
+<div id="wrapper">
+  <h1 id="title">Pick Your Perfect Phone</h1>
+
+  <h3 id="feat">Set Your Features</h3>
+  <%= form_for(@phone) do |f| %>
+    <div>
+      <%= f.label(:screen_size)%>
+      <%= f.select :screen_size, @screen_sizes %>
+
+      <%= f.label(:os)%>
+      <%= f.select :os, @os %>
+
+      <%= f.label(:camera)%>
+      <%= f.select :camera, @camera %>
+
+      <%= f.submit('Submit') %>
+    </div>
+  <% end %>
+</div>
